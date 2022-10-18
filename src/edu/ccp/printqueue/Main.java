@@ -52,8 +52,8 @@ public class Main {
 
                 case "print":
 
-                    // pops and stores current job from queue
-                    PrintJob currentJob = queue.pop();
+                    // pops and returns current job from queue
+                    queue.pop();
 
                     break; // breaks from switch
 
