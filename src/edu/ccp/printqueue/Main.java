@@ -59,6 +59,8 @@ public class Main {
                 case "exit":
 
                     exit = false;
+                    input.close();
+                    
                     break; // breaks from switch
 
                 default:
