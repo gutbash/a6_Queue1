@@ -23,9 +23,9 @@ public class Main {
         // initializes ID counter for tracking print queue jobs
         int id = 1;
 
-        boolean exit = true; // stops loop if exit command sets to false
+        boolean stay = true; // stops loop if exit command sets stay to false
 
-        while (exit) {
+        while (stay) {
 
             // initializes Scanner object for input
             Scanner input = new Scanner(System.in);
@@ -43,10 +43,11 @@ public class Main {
 
                     System.out.print("NUMBER OF PAGES: "); // prompts input
                     int pages = input.nextInt(); // reads user input
-                    PrintJob job = new PrintJob(id, pages);
+                    PrintJob job = new PrintJob(id, pages); // instantiates PrintJob with data
                     System.out.println(); // pads
                     queue.push(job); // pushes job to end of queue
                     id++;
+
                     break; // breaks from switch
 
                 case "print":
@@ -58,14 +59,15 @@ public class Main {
 
                 case "exit":
 
-                    exit = false;
-                    input.close();
-                    
+                    stay = false; // sets stay to false, ends loop
+                    input.close(); // closes input Scanner
+
                     break; // breaks from switch
 
                 default:
+                    
+                    System.out.println("ERROR: command not found"); // prints error
 
-                    System.out.println("ERROR: command not found");
                     break;
 
             } // ends switch case
