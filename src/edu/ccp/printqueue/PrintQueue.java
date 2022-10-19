@@ -1,3 +1,7 @@
+//// a6_Queue1
+// program for simulating a printer queue with jobs, interfaced by command prompt operations for CSCI 211
+// last edited Oct. 18, 2022 by S. Gutierrez
+
 package edu.ccp.printqueue; // includes project package
 
 /**
